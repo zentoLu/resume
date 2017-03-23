@@ -1,0 +1,48 @@
+//img start
+
+$avatar-r: 300px;
+
+.avatar {
+  width: 2*$avatar-r;
+  height: $avatar-r;
+  border: 10px solid $clr-light;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  display:inline-block;
+  line-height: 272px;
+}
+.cn-avatar {
+  width: $avatar-r;
+  height: $avatar-r;
+  border: 10px solid $clr-light;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  display:inline-block;
+  line-height: 272px;
+}
+
+.circle-img {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: $clr-circle;
+  padding: 18px;
+  color:$clr-big;
+  &:hover {
+    opacity: 0.8;
+    background-color: #333333;
+  }
+}
+/*@media screen and (max-width: 760px) {
+    .circle-img {
+        display: none;
+    }
+}
+*/

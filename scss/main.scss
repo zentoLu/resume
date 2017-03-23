@@ -1,0 +1,25 @@
+@import '_font';
+@import '_settings.colors';
+@import '_settings.fonts';
+@import '_settings.links';
+@import '_settings.text';
+@import '_base.global';
+@import '_components.columns';
+@import '_components.image';
+@import '_components.social';
+@import '_mobile.settings';
+@import '_components.project';
+
+#home{
+	z-index:7;
+}
+
+#particles {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+

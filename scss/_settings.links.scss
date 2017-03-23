@@ -1,0 +1,39 @@
+//links
+a {
+  color: $clr-link;
+  text-decoration: none;
+  transition: 0.5s;
+
+  &:hover {
+    color: $clr-link--hover;
+  }
+
+  &.highlight {
+    color: $clr-contrast;
+
+    &:hover {
+      color: $clr-link--hover;
+      background-color:#ADABAB;
+    }
+  }
+}
+
+#lang-panel {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border-radius: 5px;
+  z-index: 100;
+  font-size: $ft-sz-smer;
+
+  .lang {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 2px 8px;
+
+    &.selected {
+      background-color: $clr-light;
+      cursor: default;
+    }
+  }
+}

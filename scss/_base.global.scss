@@ -1,0 +1,36 @@
+//global start
+
+* {
+  box-sizing: border-box;
+}
+
+.section {
+  //background:#0f0 url(http://lutongchun.applinzi.com/bg.jpg) no-repeat center 0;
+  color: $clr-lighter;
+  padding: 50px;
+  transition: 0.5s;
+  //background-size:100% 100%;
+  &.initing {
+    display: none;
+  }
+
+  &.leaving {
+    background-color: $clr-contrast;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.clearboth {
+  clear: both;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  
+}
+body{
+  background: #f7fafc;
+}

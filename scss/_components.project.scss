@@ -1,0 +1,116 @@
+//projects
+.chart {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  .chart-link {
+    position: relative;
+    display: block;
+    &:hover{
+      .chart-hover-bg {
+        -webkit-transition: 0.1s all ease-in-out;
+        transition: 0.1s all ease-in-out;
+        opacity: 0.8;
+      }
+      .chart-hover {
+        opacity: 1;
+        .chart-title:before,.chart-subtitle:after {
+          width: 100%;
+          -webkit-transition: 0.5s all ease-in-out;
+          transition: 0.5s all ease-in-out;
+        }
+      }
+    } 
+
+    .chart-hover {
+      opacity: 0;
+      -webkit-transition: 0.5s all ease-in-out;
+      transition: 0.5s all ease-in-out;
+      position: absolute;
+      z-index: 20;
+      top: 50%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 0 20px;
+      height: 90px;
+      margin-top: -45px;
+      color: #eee;
+      text-align: center;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+      .chart-title {
+        color: #eee;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &:before {
+          content: '';
+          display: block;
+          width: 10%;
+          height: 1px;
+          margin-bottom: 10px;
+          background-color: #e43c59;
+          -webkit-transition: 0.5s all ease-in-out;
+          transition: 0.5s all ease-in-out;
+        }
+      }
+      .chart-subtitle {
+        position: relative;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-bottom: 10px;
+        &:after {
+          content: '';
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 10%;
+          height: 1px;
+          background-color: #e43c59;
+          -webkit-transition: 0.5s all ease-in-out;
+          transition: 0.5s all ease-in-out;
+        }
+      }
+    }
+    
+    .chart-hover-bg {
+      opacity: 0;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #293c55;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+    }
+
+    .img-yoxin{
+      background:url(../img/yoxin.png) no-repeat center center;
+    }
+
+    .img-china{
+      background:url(../img/china.png) no-repeat center center;
+    }
+
+    .chart-area {
+      width: 348px;
+      height: 284px;
+      display: inline-block;
+      background-size:318px,254px;
+    }
+
+  }
+
+}
+
