@@ -16,133 +16,37 @@ $(function() {
     $('.initing').removeClass('initing');
     
     $('#pagepiling').fullpage({
-        scrollingSpeed: 1000,
-        css3: true,
+        sectionsColor: ['transparent', '#1bbc9b', 'transparent', '#4BBFC3', 'transparent', '#7BAABE', 'transparent'],
+        anchors: ["page1","page2","page3","page4","page5","page6", "page7"],
         resize: true,
-        sectionsColor: ['transparent', '#1bbc9b', 'transparent', '#4BBFC3', 'transparent', '#7BAABE'],
-        anchors: ["page1","page2","page3","page4","page5","page6"],
-        verticalCentered: false,
-        afterRender: function(){
-            $("#home").css({"display":"block"}).addClass("home_zoom");
-            $("aside").css({"top":($(".active").height()-$("aside").height())/2});
-            $("header").before("<div id='header' style='opacity:0'></div>");    
-            $("#home_head").css({"margin-top":"100px"});
-            $("header").animate({opacity:"1"},1000,function(){
-                $("#header").css({"opacity":"0.3"});
-                $("#home_info1").fadeIn(700,function(){
-                    $(this).next().animate({width:"800px"},700,function(){
-                        $("#home_info2").fadeIn(450,function(){
-                            $(this).next().fadeIn(450,function(){
-                                $(this).next().fadeIn(450,function(){
-                                    $(this).next().fadeIn(450,function(){
-                                        $("aside").fadeIn(300);
-                                    });
-                                });
-                            });
-                        });
-                    });
-                });
-            }); 
-            $("aside a").eq(0).addClass("selected").siblings().removeClass("selected");
+        css3: true,
+        navigation: true,
+        scrollingSpeed: 1000,
+        afterRender: function() {
             console.log("Hi! 朋友，感谢您阅读简历代码。\n  如果您有什么建议, 欢迎加我^_^ \n %c QQ(491097990)","color: red");
         },
         afterLoad: function(anchorLink,index){
             if(index==1){
-                $("aside a").eq(0).addClass("selected").siblings().removeClass("selected");
-            }
-            if(index==2){
-                $("aside a").eq(1).addClass("selected").siblings().removeClass("selected");
-                $("#about_content h1").after("<div class='title_en'><h2>· About me ·</h2></div>");
-                $(".title_en").animate({width:"130px"},800,function(){
-                    $(".title_en h2").slideDown(400);
-                });
-                $("#about_info").animate({width:"800px",marginTop:"0",marginBottom:"0"},700,'easeOutElastic',function(){
-                    $("#about_info p").eq(0).animate({bottom:"0"},700,function(){
-                        $("#about_info p").eq(1).animate({bottom:"0"},700,function(){
-                            $("#about_info p").eq(2).animate({bottom:"0"},700,function(){
-                                $("#about_info p").eq(3).animate({bottom:"0"},700);
-                            });
-                        });
-                    });
-                }); 
+                console.log(1);
+            }else if(index==2){
+                console.log(1); 
             }
             if(index==3){
-                $("aside a").eq(2).addClass("selected").siblings().removeClass("selected");
-                $("#skill_content h1").after("<div class='title_en'><h2>· Skill ·</h2></div>");
-                $(".title_en").animate({width:"130px"},800,function(){
-                    $(".title_en h2").slideDown(400);
-                }); 
-                $(".skill_list_content").addClass("skill_scale");
+                console.log(1);
             }
             if(index==4){
-                $("aside a").eq(3).addClass("selected").siblings().removeClass("selected");
-                $("#exp_content h1").after("<div class='title_en'><h2>· Experience ·</h2></div>");
-                $(".title_en").animate({width:"130px"},800,function(){
-                    $(".title_en h2").slideDown(400);
-                }); 
-                var i=-1;
-                $(".exp_scale").each(function() {
-                    var $this=$(this);
-                    if(!$this.hasClass("b_to_t")){
-                        i++;
-                        setTimeout(function(){
-                       $this.addClass("b_to_t");
-                       },200*i);
-                    }
-                });
-                $("#exp_list_to").fadeIn(800).delay(500).fadeTo(300,0.3);
+                console.log(1);
             }
             if(index==5){
-                $("aside a").eq(4).addClass("selected").siblings().removeClass("selected");
-                $("#demo_content h1").after("<div class='title_en'><h2>· Demo ·</h2></div>");
-                $(".title_en").animate({width:"130px"},800,function(){
-                    $(".title_en h2").slideDown(400);
-                }); 
-                var i=-1;
-                $(".demo_scale").each(function() {
-                    var $this=$(this);
-                    if(!$this.hasClass("b_to_t")){
-                        i++;
-                        setTimeout(function(){
-                       $this.addClass("b_to_t");
-                       },200*i);
-                    }
-                })
+                console.log(1);
             }
             if(index==6){
-                $("aside a").eq(5).addClass("selected").siblings().removeClass("selected");
-                $("#contact_content h1").after("<div class='title_en'><h2>· Contact me ·</h2></div>");
-                $(".title_en").animate({width:"130px"},800,function(){
-                    $(".title_en h2").slideDown(400);
-                }); 
-                var i=-1;
-                $("#contact_head1").addClass("b_to_t");
-                $("#contact_head2 span").each(function(){
-                    var $this=$(this);
-                    if(!$this.hasClass("fade_in")){
-                        i++;
-                        setTimeout(function(){
-                       $this.addClass("fade_in");
-                       },200*i);
-                    }
-                });
-                var j=-1;
-                setTimeout(function(){
-                        $(".contact_scale").each(function(){
-                            var $this=$(this);
-                            if(!$this.hasClass("fade_in")){
-                                j++;
-                                setTimeout(function(){
-                                    $this.addClass("fade_in");
-                                },350*j);
-                            }
-                        });
-                },70);
+                console.log(1);
             }
         },
         onLeave:function(index){
             if(index==2||index==3||index==4||index==5||index==6){
-                $(".title_en").remove();    
+                console.log(1);
             }
         }
     });

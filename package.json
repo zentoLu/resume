@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/zentoLu/cv#readme",
   "devDependencies": {
-    "async": "^2.0.0-rc.3",
+    "async": "^2.1.5",
     "browser-sync": "^2.11.2",
     "clean-css": "^3.4.11",
     "gulp": "^3.9.1",
