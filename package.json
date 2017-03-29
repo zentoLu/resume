@@ -24,6 +24,7 @@
     "browser-sync": "^2.11.2",
     "clean-css": "^3.4.11",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-compass": "^2.1.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",

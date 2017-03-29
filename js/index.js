@@ -23,6 +23,21 @@ $(function() {
         navigation: true,
         scrollingSpeed: 1000,
         afterRender: function() {
+            $('#particles').addClass('particles_zoom');
+            $('#avatar').addClass('up');
+            $('#quoto').animate({opacity:1},700);
+            $('#line').animate({width: '500px'},700,function(){
+                $('#homeName').delay(1000).animate({opacity:1},700,function(){
+                    $('#homeProfession').animate({opacity:1},450);
+                    $('#homeAge').animate({opacity:1},450,function(){
+                        $('#homeMail').animate({opacity:1},450);
+                    });
+                });
+            });
+           
+                
+                
+            
             console.log("Hi! 朋友，感谢您阅读简历代码。\n  如果您有什么建议, 欢迎加我^_^ \n %c QQ(491097990)","color: red");
         },
         afterLoad: function(anchorLink,index){
@@ -93,7 +108,7 @@ $(function() {
                 random: !0,
                 anim: {
                     enable: !1,
-                    speed: 180,
+                    speed: 280,
                     size_min: .1,
                     sync: !1
                 }

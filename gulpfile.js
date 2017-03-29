@@ -7,6 +7,7 @@ var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync');
 var rename = require('gulp-rename');
+var autoprefixer = require('gulp-autoprefixer');
 var path = {
     css: {
         src_scss: 'scss/*.scss',
@@ -42,6 +43,10 @@ gulp.task('sass', function(){
         //.pipe(sourcemaps.write())
 
         // For file sourcemaps
+        .pipe(autoprefixer({
+            browsers: ['> 5%'],
+            cascade: false
+        }))
         .pipe(sourcemaps.write('maps', {
           includeContent: false,
           sourceRoot: 'scss'
@@ -51,12 +56,6 @@ gulp.task('sass', function(){
         .pipe(notify({ message: 'css task complete' }));
 });
 
-gulp.task('lib', function() {
-    gulp.src(['./bower_components/pagepiling.js/jquery.pagepiling.css'])
-        .pipe(gulp.dest('./css'));
-    gulp.src(['./bower_components/pagepiling.js/jquery.pagepiling.js'])
-        .pipe(gulp.dest('./lib'));
-});
 
 gulp.task('minjs', function() {
     gulp.src('js/index.js')

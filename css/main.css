@@ -78,6 +78,7 @@ ul {
 a {
   color: #08c;
   text-decoration: none;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover {
@@ -176,6 +177,7 @@ ul {
 .section {
   color: #333;
   padding: 50px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .section.initing {
@@ -322,9 +324,6 @@ body {
   width: 600px;
   height: 300px;
   border: 10px solid #ddd;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
   display: inline-block;
   line-height: 272px;
@@ -334,9 +333,6 @@ body {
   width: 300px;
   height: 300px;
   border: 10px solid #ddd;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
   display: inline-block;
   line-height: 272px;
@@ -372,6 +368,7 @@ body {
   height: 40px;
   background-color: #08c;
   background-image: url("../img/social.png");
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   display: inline-block;
   margin-right: 2px;
@@ -428,6 +425,7 @@ body {
   height: 32px;
   background-image: url("../img/social.png");
   background-size: 160px 60px;
+  -webkit-transition: 1s;
   transition: 1s;
   display: inline-block;
   border-bottom: none;
@@ -548,10 +546,8 @@ body {
   margin: 0 auto;
   margin-bottom: 30px;
   border: 1px solid #eee;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   background-color: #f9f9f9;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .chart .chart-link {
@@ -586,7 +582,6 @@ body {
   margin-top: -45px;
   color: #eee;
   text-align: center;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 .chart .chart-link .chart-hover .chart-title {
@@ -632,7 +627,6 @@ body {
   bottom: 0;
   left: 0;
   background-color: #293c55;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 .chart .chart-link .img-yoxin {
@@ -648,8 +642,21 @@ body {
   background-size: 318px,254px;
 }
 
-#home {
-  z-index: 7;
+.hide {
+  opacity: 0;
+}
+
+#quoto {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.line {
+  display: inline-block;
+  height: 1px;
+  width: 1px;
+  background: #ccc;
 }
 
 #particles {
@@ -658,6 +665,38 @@ body {
   z-index: -1;
   width: 100%;
   height: 100%;
+}
+
+.particles_zoom {
+  -webkit-animation: zoom 2s ease-in-out;
+  animation: zoom 2s ease-in-out;
+}
+
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(2, 2);
+    transform: scale(2, 2);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    -webkit-transform: scale(2, 2);
+    transform: scale(2, 2);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+#avatar.up {
+  margin-top: -50px;
+  -webkit-transition: margin-top 2s ease-in-out;
+  transition: margin-top 2s ease-in-out;
 }
 
 
